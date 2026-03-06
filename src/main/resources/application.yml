@@ -3,9 +3,9 @@ spring:
     name: stayease
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/stayease_db
-    username: postgres
-    password: 1998
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/stayease_db}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
